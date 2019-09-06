@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+//add a comment
 
 MinHeap CreateHeap(int MaxSize)
 { /* 创建容量为MaxSize的空的最大堆 */
