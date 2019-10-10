@@ -27,7 +27,7 @@ bool Insert(MinHeap H, HeapElementType X)
 
     if (IsHeapFull(H))
     {
-        printf("最大堆已满");
+        print("最大堆已满");
         return false;
     }
     i = ++H->Size; /* i指向插入后堆中的最后一个元素的位置 */
