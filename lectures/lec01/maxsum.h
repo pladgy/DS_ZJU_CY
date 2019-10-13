@@ -6,5 +6,5 @@
  * 
  */
 int maxSubSum1(const int a[] , int n);
-
+int maxSubSum2(const int a[] , int n);
 #endif

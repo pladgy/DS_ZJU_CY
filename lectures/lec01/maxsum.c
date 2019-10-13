@@ -19,3 +19,20 @@ int maxSubSum1(const int a[] , int n)
         
     return maxSum;
 }
+
+int maxSubSum2(const int a[] , int n)
+{
+    int maxSum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int thisSum = 0;
+        for (int j = i; j < n; j++)
+        {
+            thisSum += a[j];
+            if(thisSum > maxSum)
+                maxSum = thisSum;
+        }        
+    } 
+
+    return maxSum;   
+}
