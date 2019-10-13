@@ -4,12 +4,12 @@
 int maxSubSum1(const int a[], int n)
 {
     int maxSum = 0;
-    for (int i = 0; i < n; ++i)
-        for (int j = i; j < n; ++j)
+    for (int i = 0; i < n; i++)
+        for (int j = i; j < n; j++)
         {
             int thisSum =0;
 
-            for (int k = i; k <= j; ++k)
+            for (int k = i; k <= j; k++)
                 thisSum += a[k];
   
             if (thisSum > maxSum)
@@ -25,10 +25,10 @@ int maxSubSum1(const int a[], int n)
 int maxSubSum2(const int a[], int n)
 {
     int maxSum = 0;
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
     {
         int thisSum = 0;
-        for (int j = i; j < n; ++j)
+        for (int j = i; j < n; j++)
         {
             thisSum += a[j];
             if(thisSum > maxSum)
@@ -65,7 +65,7 @@ int maxSumRec(const int a[], int left, int right)
     int maxRightSum = maxSumRec(a, center + 1, right);
     
     int maxLeftBorderSum = 0, leftBorderSum = 0;
-    for (int i = center; i >= left; --i)
+    for (int i = center; i >= left; i--)
     {
         leftBorderSum += a[i];
         if (leftBorderSum > maxLeftBorderSum)
@@ -91,4 +91,24 @@ int maxSumRec(const int a[], int left, int right)
 int maxSubSum3(const int a[], int n)
 {
     return maxSumRec(a, 0, n-1);
+}
+
+/**
+* Linear-time maximum contiguous subsequence sum algorithm.
+*/
+
+int maxSubSum4(const int a[], int n)
+{
+    int maxSum = 0, thisSum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        thisSum += a[i];
+
+        if (thisSum > maxSum)
+            maxSum = thisSum;
+        else if(thisSum < 0)
+            thisSum = 0;
+    }
+    return maxSum;    
 }

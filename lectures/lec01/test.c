@@ -13,5 +13,7 @@ int main(int argc, char const *argv[])
     printf("Max sum2 is %d\n", maxSum); 
     maxSum = maxSubSum3(a, ARRAY_LEN);
     printf("Max sum3 is %d\n", maxSum);   
+    maxSum = maxSubSum4(a, ARRAY_LEN);
+    printf("Max sum4 is %d\n", maxSum); 
     return 0;
 }
