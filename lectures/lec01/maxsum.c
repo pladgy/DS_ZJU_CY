@@ -1,7 +1,6 @@
 /**
- *最大子序列和：
- * Maximum subsequence sum  * 
- */
+* Cubic maximum contiguous subsequence sum algorithm.
+*/
 int maxSubSum1(const int a[] , int n)
 {
     int maxSum = 0;
@@ -20,6 +19,9 @@ int maxSubSum1(const int a[] , int n)
     return maxSum;
 }
 
+/**
+* Quadratic maximum contiguous subsequence sum algorithm.
+*/
 int maxSubSum2(const int a[] , int n)
 {
     int maxSum = 0;
@@ -35,4 +37,23 @@ int maxSubSum2(const int a[] , int n)
     } 
 
     return maxSum;   
+}
+
+/**
+* Recursive maximum contiguous subsequence sum algorithm.
+* Finds maximum sum in subarray spanning a[left..right].
+* Does not attempt to maintain actual best sequence.
+*/
+int maxSumRec( const int a[], int left, int right )
+{
+
+}
+
+/**
+* Driver for divide-and-conquer maximum contiguous
+* subsequence sum algorithm.
+*/
+int maxSubSum3( const int a[], int n)
+{
+    return maxSumRec(a, 0, n-1);
 }
