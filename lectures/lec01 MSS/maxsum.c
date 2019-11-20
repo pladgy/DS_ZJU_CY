@@ -6,7 +6,7 @@ int maxSubSum1(const int a[], int n)
     int maxSum = 0;
     for (int i = 0; i < n; i++)
         for (int j = i; j < n; j++)
-        {
+        { 
             int thisSum =0;
 
             for (int k = i; k <= j; k++)
@@ -80,7 +80,7 @@ int maxSumRec(const int a[], int left, int right)
             maxRightBorderSum = rightBorderSum;            
     }
     
-    return max3(maxLeftSum, maxRightSum, 
+    return max3(maxLeftSum, maxRightSum,   
                     maxLeftBorderSum + maxRightBorderSum);        
 }
 
